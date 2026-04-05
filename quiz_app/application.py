@@ -26,6 +26,8 @@ class QuizApplication:
         print(" " * 22 + "Python Quiz App")
         print("=" * 62)
         print("Answer the questions and check your score at the end.")
+        print(f"Questions available: {self.engine.total_questions}")
+        print("Type the option number for each answer.")
         print(f"Best recorded score: {load_best_score()}%")
 
     def _run_quiz_round(self) -> None:

@@ -73,6 +73,13 @@ class QuizApplication:
         for category, correct, total in self.engine.category_breakdown():
             print(f"- {category}: {correct}/{total}")
 
+        print("\nAnswer Review:")
+        for question_number, result in enumerate(self.engine.history, start=1):
+            print(f"{question_number}. {result.question.prompt}")
+            print(f"   Your answer: {result.selected_choice}")
+            print(f"   Correct answer: {result.correct_choice}")
+            print(f"   Status: {'Correct' if result.is_correct else 'Incorrect'}")
+
     def _get_user_choice(self, total_choices: int) -> int:
         while True:
             user_input = input("Choose an option number: ").strip()

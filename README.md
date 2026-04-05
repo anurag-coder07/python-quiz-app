@@ -6,6 +6,8 @@ A command-line quiz app built with Python. It asks multiple-choice questions, ch
 
 - multiple-choice Python questions
 - instant feedback after each answer
+- score tracking during the quiz
+- correct answers shown during review
 - final score summary
 - score by category
 - best score saved locally
@@ -48,7 +50,7 @@ python main.py
 3. Enter the option number for your answer.
 4. Check the explanation shown after each answer.
 5. Watch your score update as you answer questions.
-6. Review your final score and category breakdown.
+6. Review your final score, category breakdown, and answer review.
 7. Choose whether to play another round.
 
 ## Example
@@ -74,6 +76,18 @@ Which keyword is used to define a function in Python?
 Choose an option number: 3
 Result: Correct
 Current score: 1/1
+
+==============================================================
+Quiz Summary
+==============================================================
+Score: 8/10
+Accuracy: 80%
+
+Answer Review:
+1. Which keyword is used to define a function in Python?
+   Your answer: def
+   Correct answer: def
+   Status: Correct
 ```
 
 ## Tests

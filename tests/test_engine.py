@@ -45,6 +45,7 @@ class QuizEngineTests(unittest.TestCase):
         result = self.engine.submit_answer(0)
 
         self.assertFalse(result.is_correct)
+        self.assertEqual(result.selected_choice, "A")
         self.assertEqual(result.correct_choice, "B")
         self.assertEqual(self.engine.score, 0)
 

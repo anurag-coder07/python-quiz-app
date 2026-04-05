@@ -25,3 +25,7 @@ class AnswerResult:
     @property
     def correct_choice(self) -> str:
         return self.question.choices[self.question.answer_index]
+
+    @property
+    def selected_choice(self) -> str:
+        return self.question.choices[self.selected_index]

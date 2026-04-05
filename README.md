@@ -2,24 +2,30 @@
 
 A command-line quiz app built with Python. It asks multiple-choice questions, checks answers, and shows a summary at the end of each round.
 
-The project is split into separate files for the app flow, quiz engine, question bank, models, and score storage.
+## What Problem It Solves
+
+This project solves the problem of making quiz practice more interactive than a plain question list. Instead of only showing questions and answers, it tracks the score, shows categories, reviews answers, and lets the user replay the quiz.
+
+## What I Learned
+
+I built this project to practice Python program structure, question handling, score tracking, and user interaction in the terminal. It also helped me work with lists, dictionaries, functions, loops, and modular file organization.
 
 ## Features
 
 - Multiple questions
+- Categories for questions
 - Score tracking
+- Correct answers shown after each round
+- Performance message based on final score
 - Replay option
-- multiple-choice Python questions
 - instant feedback after each answer
-- score tracking during the quiz
-- correct answers shown during review
 - final score summary
 - score by category
 - best score saved locally
-- option to play again
 - clean terminal output
 - input retry for invalid answers
-- question bank stored separately
+- modular structure with separate files
+- question bank stored in a separate list/dictionary structure
 - random question order each round
 
 ## Project Structure
@@ -89,6 +95,7 @@ Quiz Summary
 ==============================================================
 Score: 8/10
 Accuracy: 80%
+Good work. You have a solid base and clear momentum.
 
 Answer Review:
 1. Which keyword is used to define a function in Python?

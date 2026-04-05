@@ -1,4 +1,4 @@
-"""Entry point for the Professional Python Quiz App."""
+"""Entry point for the quiz app."""
 
 from quiz_app.application import QuizApplication
 

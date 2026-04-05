@@ -1,4 +1,4 @@
-"""Console user interface for the quiz application."""
+"""Console interface for the quiz application."""
 
 from quiz_app.engine import QuizEngine
 from quiz_app.question_bank import QUESTIONS
@@ -23,9 +23,9 @@ class QuizApplication:
 
     def _print_welcome(self) -> None:
         print("=" * 62)
-        print(" " * 16 + "Professional Python Quiz App")
+        print(" " * 22 + "Python Quiz App")
         print("=" * 62)
-        print("Sharpen your Python fundamentals with guided feedback.")
+        print("Answer the questions and check your score at the end.")
         print(f"Best recorded score: {load_best_score()}%")
 
     def _run_quiz_round(self) -> None:

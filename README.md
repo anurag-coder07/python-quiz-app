@@ -2,8 +2,13 @@
 
 A command-line quiz app built with Python. It asks multiple-choice questions, checks answers, and shows a summary at the end of each round.
 
+The project is split into separate files for the app flow, quiz engine, question bank, models, and score storage.
+
 ## Features
 
+- Multiple questions
+- Score tracking
+- Replay option
 - multiple-choice Python questions
 - instant feedback after each answer
 - score tracking during the quiz
@@ -12,6 +17,8 @@ A command-line quiz app built with Python. It asks multiple-choice questions, ch
 - score by category
 - best score saved locally
 - option to play again
+- clean terminal output
+- input retry for invalid answers
 - question bank stored separately
 - random question order each round
 
@@ -95,3 +102,9 @@ Answer Review:
 ```bash
 python -m unittest discover -s tests
 ```
+
+## Concepts Used
+
+- Lists & dictionaries
+- Functions
+- Loops

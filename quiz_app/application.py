@@ -1,7 +1,7 @@
 """Console interface for the quiz application."""
 
 from quiz_app.engine import QuizEngine
-from quiz_app.question_bank import QUESTIONS
+from quiz_app.question_bank import load_questions
 from quiz_app.storage import load_best_score, save_best_score
 
 
@@ -9,13 +9,13 @@ class QuizApplication:
     """Runs the interactive console quiz."""
 
     def __init__(self) -> None:
-        self.engine = QuizEngine(QUESTIONS)
+        self.engine = QuizEngine(load_questions())
 
     def run(self) -> None:
         self._print_welcome()
 
         while True:
-            self.engine.reset()
+            self.engine.reset(shuffle_questions=True)
             self._run_quiz_round()
             if not self._ask_to_play_again():
                 print("\nThanks for using the quiz app.")
@@ -28,6 +28,7 @@ class QuizApplication:
         print("Answer the questions and check your score at the end.")
         print(f"Questions available: {self.engine.total_questions}")
         print("Type the option number for each answer.")
+        print("Question order changes each round.")
         print(f"Best recorded score: {load_best_score()}%")
 
     def _run_quiz_round(self) -> None:
@@ -52,6 +53,7 @@ class QuizApplication:
                 print(f"Result: Incorrect. Correct answer: {result.correct_choice}")
 
             print(f"Why it matters: {result.question.explanation}")
+            print(f"Current score: {self.engine.score}/{self.engine.answered_questions()}")
 
         self._print_summary()
 

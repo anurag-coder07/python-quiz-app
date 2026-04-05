@@ -1,6 +1,7 @@
 """Tests for the quiz engine."""
 
 import unittest
+from unittest.mock import patch
 
 from quiz_app.engine import QuizEngine
 from quiz_app.models import Question
@@ -62,6 +63,12 @@ class QuizEngineTests(unittest.TestCase):
         self.engine.submit_answer(2)
 
         self.assertEqual(self.engine.score_percentage(), 67)
+
+    @patch("quiz_app.engine.shuffle")
+    def test_reset_can_shuffle_question_order(self, mock_shuffle) -> None:
+        self.engine.reset(shuffle_questions=True)
+
+        mock_shuffle.assert_called_once()
 
 
 if __name__ == "__main__":
